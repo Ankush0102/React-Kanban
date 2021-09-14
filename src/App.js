@@ -1,24 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from 'react';
+import CreateBoard from './components/createBoard/CreateBoard';
+import Login from './components/login/Login';
+import { BrowserRouter as Router,Route,Switch } from 'react-router-dom';
+import {DndProvider} from 'react-dnd';
+import { HTML5Backend } from 'react-dnd-html5-backend';
 
 function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    
+      <div className="App">
+        <Router>
+          <Switch>
+            <Route exact path="/" component={Login} />
+          <DndProvider backend={HTML5Backend}>
+            <Route exact path="/create-board" component={CreateBoard} />
+          </DndProvider>
+          </Switch>
+        </Router>
+      </div>
   );
 }
 

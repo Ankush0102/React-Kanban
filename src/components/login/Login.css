@@ -1,0 +1,46 @@
+.login-page {
+    min-height: 100vh;
+}
+.bg-icon {
+    margin-top: 100px;
+    height: 600px;
+    background-image: url('../../assets/images/Planning.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-size: 100%;
+}
+@media screen and (max-width: 567px){
+    .bg-icon{
+        height: 200px;
+        margin-top: 50px;
+    }
+}
+.right_side {
+    background: #ffffff;
+}
+
+.form-inner {
+    margin-top: 100px;
+    padding: 20px;
+}
+@media screen and (max-width: 567px){
+    .form-inner{
+    margin-top:20px;
+    }
+}
+.header {
+    font-family:serif
+}
+
+.warning-icon {
+    width: 15px;
+    margin-right: 4px;
+}
+
+.form-group {
+    margin-top: 20px;
+}
+.mb-6 {
+    margin-bottom: 6px;
+}
+
